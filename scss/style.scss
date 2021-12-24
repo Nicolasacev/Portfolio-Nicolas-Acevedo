@@ -1,0 +1,519 @@
+/*---------------------------variables-------------------------------*/
+
+@import "./_variables.scss";
+
+/*google fonts*/
+
+/*-----------------------------RESET---------------------------------*/
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        body{
+            width: 100vw;   
+            height: 100vh;
+            font-size: 1.31rem;
+            a{
+            text-decoration: none;
+            color: black;
+            }
+        }
+    }
+
+/*-----------------------------style a nivel sitio---------------------------------*/
+
+/*------------grid---------------------------*/
+
+    .grid{
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows:10% 1fr 30%;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+        header{
+            grid-area: header;
+        }
+        main{
+            grid-area: main;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
+        
+  /*Barra navegación*/
+    .navbar{
+        flex-wrap: nowrap;
+        padding: 0;
+        .logo {
+            height: 5.3125rem;
+            width: 5.3125rem;
+        }
+        .contenedor-h1{
+            align-content: center;
+            h1{
+                font-size:2rem;
+                margin-left: 0.5em;
+                align-self: center;
+                font-family: $font-script;
+                margin-bottom: 0;
+                margin-top: 0.5;
+                font-weight: bolder;
+            }   
+        }
+    }
+    .container,.container-fluid,.container-lg,.container-md,.container-sm, .container-xl, .container-xxl{
+        flex-wrap: nowrap;
+        padding-left: 0%;
+    }
+
+    .navbar-collapse {
+    position: relative;
+    top: 1rem;
+    right: 1rem;
+    flex-basis: 0%;
+    }
+    ul{
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    z-index: 3;
+    li {
+        display: block;
+        background: lightgrey;
+        padding: 10px;
+        list-style: none;
+        border-bottom: 1px solid grey;
+        z-index: 2;
+        background-color: white;
+        font-size: 2rem;
+        border-radius: 5px;
+    }
+    }
+    /*titulos de cada página*/
+
+    h2{
+        font-size: 2.5rem;
+        border: 1px solid white;
+        width: 100%;
+        margin-bottom: 0.2rem;
+    }
+
+    /*main*/
+
+    main{
+        height: 48rem;
+        color: white;
+    }
+
+    /*footer*/
+
+    footer{
+        background-color: grey;
+        height:15rem; 
+        .parrafo-footer{
+            text-align: center;
+            padding-top: 10rem;
+        }
+    }
+
+    /* breakpoint 768 a nivel sitio */
+
+@media screen and (min-width: 768px){
+
+    header{
+        justify-content: space-between;
+        
+        .container-fluid{
+            width: auto;
+            h1{
+                align-self: center;
+                padding-right: 90px;
+                white-space: nowrap;
+                font-size: 3rem;
+                margin-bottom: 0;
+            }
+            .navbar-toggler{
+                margin-left: 15rem; 
+            }
+            .navbar-toggler-icon{
+                display: block;
+            }
+        }
+    }
+
+    main{
+        height: 47rem;
+        color: white;
+    }
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg {
+        justify-content: unset;
+        padding-left: 0;
+        margin-left: 0;
+    }
+}
+
+    /* breakpoint 1000px a nivel sitio */
+
+@media screen and (min-width: 1000px) {
+
+        h1{
+            font-size:2.2rem;
+            padding:4px;
+            line-height: 0.8;
+            position: absolute;
+            top: 1rem;
+            left: 5rem;
+            width: 2rem;
+            white-space: normal;
+        }
+        .logo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90px;
+        }
+        .navbar-collapse {
+            position: absolute;
+            ul{
+                display: flex;
+                position: absolute;
+                right: 30px;
+                top:2px;
+                white-space: nowrap;
+                li {
+                    align-self: center;
+                    background: none;
+                    list-style: none;
+                    font-size: 1.1rem;
+                    border: none;
+                    text-align: center;
+                    font-weight: bolder; 
+                    a {
+                        text-decoration: none; 
+                        a.nav-link{
+                            padding: 0;
+                            white-space: nowrap;
+                        }  
+                    }      
+                }
+            }
+        }
+    main{
+        height: 47rem;
+    }
+}
+
+/*------------------------------Comienza pagina HOME--------------------------*/
+
+        h1 {
+            animation-duration: 2s;
+            animation-name: aparecer;
+            animation-iteration-count: initial;
+            @keyframes aparecer{
+                0% {
+                  opacity: 0;
+                }
+                100% {
+                  opacity: 1;
+                }
+            }
+        }      
+
+    #main-index{
+        font-size: 1.56rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: url(../Imagenes/imagen-home.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border: 2px solid black;
+        height: 100%;
+        .th2{
+            width: 100%;  
+            border: 1px solid white;
+        }
+   
+        #boton-inicio{
+            margin-top: 5rem;
+            background-color: #ff8500;
+            border-radius: 25px;
+            padding: 25px;
+            font-size: 1.3rem;
+            font-weight: bolder;
+            margin-bottom: 3rem;
+            &:hover{
+                transform: scale(1.2,1.2);
+            }
+        }
+    }
+    div.transbox{
+        margin-bottom: 20%;
+        background-color: $primary-color;
+        border: 1px solid black;
+        opacity: 0.9;
+        p{
+          font-weight: bold;
+          margin-top: 10%;
+        }
+        .p1{
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+    }
+        /* breakpoint 768px home */
+
+@media screen and (min-width: 768px) {
+
+    #boton-inicio{
+        margin-top: 2rem;
+        width: 30rem;
+        padding: 15px;
+        font-size: 1.5rem;
+    }
+}
+   /* breakpoint 1000px home */
+
+@media screen and (min-width: 1000px) {
+
+    div.transbox{
+        margin-bottom: 11%;
+    }
+    #boton-inicio{
+        margin-top: 7rem;
+    }
+}
+ /* breakpoint + de 1024px home */
+
+@media screen and (min-width: 1050px) {
+
+    main{
+        margin-top:1.5rem;
+    }
+}
+
+/*------------------------------Comienza pagina SERVICIOS--------------------------*/
+
+    #main-servicios{
+        background-image: url(../Imagenes/servicios.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-size: 1.06rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        .contenedor-serv{
+            background-color: $primary-color;
+            border: 1px solid white;
+            margin: 10px;
+            height: 29%;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            padding: 10px;
+            .h3-Servicios{
+                font-size: 1.4rem;
+                margin-bottom: 1.5rem;
+            }
+        }  
+    }
+
+/*------------------------------Comienza pagina PORTFOLIO--------------------------*/
+
+    #main-portfolio{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        background-color: $primary-color;
+        .contenedor-carrusel{
+            margin-top: 6rem;
+            .row>* {
+                padding-right: calc(var(--bs-gutter-x) * .0);
+                padding-left: calc(var(--bs-gutter-x) * .0);
+                .carousel-item img{
+                    height: 400px;
+                    width: auto;
+                }
+                .carousel-caption{
+                    margin: 0;
+                }           
+            }
+        }
+    }
+
+       /* breakpoint 768 portfolio */
+
+@media screen and (min-width: 768px) {
+
+    #main-portfolio{
+        display: inline-block;  
+    }
+
+    .contenedor-carrusel{
+        margin-top: 0;
+        .carousel-item img{
+            height: 730px;
+            width: 1400px;
+        }
+    }
+}
+
+   /* breakpoint 1000px portfolio */
+
+@media screen and (min-width: 1000px) {
+
+    #main-portfolio{
+        display: flex;
+        h5{
+            font-size: 4rem;
+        }
+    }   
+}
+
+/*------------------------------Comienza pagina SOBRE MI--------------------------*/
+
+    #main-sobre-mi{
+        background-image: url(../Imagenes/sobre-mi.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        .p-sobre-mi{
+            margin-top: 2.5rem;
+            padding:1rem;
+        }
+    }
+
+       /* breakpoint 768px sobre mi */
+
+@media screen and (min-width: 768px) {
+
+  #main-sobre-mi{
+     .p-sobre-mi{
+        margin-top: 26rem;
+    }
+  }
+}
+
+      /* breakpoint 1000px sobre mi */
+
+@media screen and (min-width: 1000px) {
+
+    #main-sobre-mi{
+        .p-sobre-mi{
+            margin-top: 24rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/*------------------------------Comienza pagina Contacto--------------------------*/
+
+    #main-contacto{
+        color: white;
+        text-align: center;
+        background-color: $primary-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .container-form{
+            margin-top: 5rem;
+            width: 18rem;
+            height: 70%;
+            border: 3px solid black;
+            border-radius: 16px;
+            -webkit-box-shadow: 20px 19px 15px -9px rgba(0,0,0,0.75);
+            -moz-box-shadow: 20px 19px 15px -9px rgba(0,0,0,0.75);
+            box-shadow: 20px 19px 15px -9px rgba(0,0,0,0.75);
+            form{
+                display: flex;
+                flex-direction: column;
+                .input-form{
+                    height: 40px;
+                    width: 85%;
+                    align-self: center;
+                    border-radius: 12px;
+                    text-align: center;
+                    font-size: 0.94rem;
+                }
+            
+                .label-form{
+                    color: white;
+                    padding-left: 10px;
+                    margin-bottom: 4px;
+                    font-size: 1.4rem;
+                }    
+            
+                .btn-form{
+                    margin-top: 2rem;
+                    background-color: #ff8500; 
+                    border: none;
+                    border-radius: 12px;
+                    color: white;
+                    padding: 12px 30px;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    align-self: center;
+                } 
+            }
+        }
+    }
+
+       /* breakpoint 768px contacto */
+
+@media screen and (min-width: 768px) {
+    
+    #main-contacto{
+        .container-form{
+            margin-top: 30px;
+            width: 35rem;
+            height: 80%;
+            form{
+                margin-top: 2rem;
+                .btn-form{
+                    margin-top:3rem;
+                    background-color: #ff8500; 
+                    border: none;
+                    border-radius: 12px;
+                    color: white;
+                    padding: 20px 60px;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    align-self: center;
+                } 
+            }
+        }
+    }
+}
+
+   /* breakpoint 1000px contacto */
+
+@media screen and (min-width: 1000px) {
+
+    #main-contacto{
+        .container-form{
+            margin-top: 70px;
+            width: 35rem;
+            height: 80%;
+            form{
+                margin-top: 3rem;
+                .btn-form{
+                    margin-top: 2rem;
+                    padding: 30px 80px;
+                } 
+            }
+        }
+    }
+}

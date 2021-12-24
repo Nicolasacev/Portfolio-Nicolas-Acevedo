@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <!---------------------------------------Comienza el BODY---------------------------------->
+  <body class="grid">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a href="./index.html"><img class="logo" src="../Imagenes/logo.jfif" alt="logo"></a>
+          <div class="contenedor-h1"><h1>Nicolas Acevedo</h1></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="./servicios.html">Servicios</a></li>
+              <li class="nav-item"><a class="nav-link active" href="./portfolio.html">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link" href="./sobre-mi.html">Sobre mi</a></li>
+              <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://www.change.org/">Ir al Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!---------------------------------------Comienza el MAIN---------------------------------->
+    <main id="main-portfolio">
+      <h2>Portfolio</h2>
+      <div class="container-fluid contenedor-carrusel" >
+        <div class= "row carruselPadding">
+          <div class="col">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../Imagenes/Portfolio-1.jpg" class="d-block w-100" alt="imagen de proyecto de agencia">
+                  <div class="carousel-caption d-md-block transbox">
+                    <h5>Agencia Buh</h5>
+                    <p>Agencia de comercio electronico y marketing-digital.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../Imagenes/Portfolio-2.jpg" class="d-block w-100" alt="rompecabezas imagen proyecto paula ibañez">
+                  <div class="carousel-caption d-md-block transbox">
+                    <h5>Paula Ibañez</h5>
+                    <p>Coach de vida y asesoria de imagen.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../Imagenes/Portfolio-3.jpg" class="d-block w-100" alt="caja de chocolates correspomdiente a la marca maygon">
+                  <div class="carousel-caption d-md-block transbox">
+                    <h5>Chocolates Maygon</h5>
+                    <p>Tienda online de chocolates personalizados.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!---------------------------------------Comienza el FOOTER---------------------------------->
+    <footer>
+      <p class="parrafo-footer">Desarrollado por Nicolas Acevedo</p>
+    </footer>
+    <!-- Script Bootstrap -->   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
