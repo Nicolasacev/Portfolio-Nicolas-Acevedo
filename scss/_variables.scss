@@ -8,3 +8,26 @@ $secondary-color: #ff8500;
 
 /*google fonts*/
 $font-script:'Dynalight', cursive;
+
+
+@mixin btns-form ($margin-top, $padding){
+    margin-top: $margin-top;
+    padding: $padding;
+}
+
+$heading: (
+    h1-mobile:2rem,
+    h1-tablet:3rem,
+    h1-desktop:2.2rem,
+    h2:2.5rem,
+    h3:1.4rem,
+);
+
+$h1-mobile: map-get($heading, h1-mobile);
+$h1-tablet: map-get($heading, h1-tablet);
+$h1-desktop: map-get($heading, h1-desktop);
+$h2: map-get($heading, h2);
+$h3: map-get($heading, h3);
+
+
+

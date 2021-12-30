@@ -190,16 +190,19 @@ h1 {
   #main-index .th2 {
     width: 100%;
     border: 1px solid white; }
-  #main-index #boton-inicio {
-    margin-top: 5rem;
-    background-color: #ff8500;
-    border-radius: 25px;
-    padding: 25px;
-    font-size: 1.3rem;
-    font-weight: bolder;
-    margin-bottom: 3rem; }
-    #main-index #boton-inicio:hover {
-      transform: scale(1.2, 1.2); }
+
+.boton, .boton--inicio, #main-contacto .container-form form .boton--contacto {
+  background-color: #ff8500;
+  border-radius: 20px;
+  font-weight: bolder; }
+
+.boton--inicio {
+  margin-top: 5rem;
+  padding: 25px;
+  font-size: 1.3rem;
+  margin-bottom: 3rem; }
+  .boton--inicio:hover {
+    transform: scale(1.2, 1.2); }
 
 div.transbox {
   margin-bottom: 20%;
@@ -215,7 +218,7 @@ div.transbox {
 
 /* breakpoint 768px home */
 @media screen and (min-width: 768px) {
-  #boton-inicio {
+  .boton--inicio {
     margin-top: 2rem;
     width: 30rem;
     padding: 15px;
@@ -225,7 +228,7 @@ div.transbox {
 @media screen and (min-width: 1000px) {
   div.transbox {
     margin-bottom: 11%; }
-  #boton-inicio {
+  .boton--inicio {
     margin-top: 7rem; } }
 
 /* breakpoint + de 1024px home */
@@ -345,13 +348,11 @@ div.transbox {
         padding-left: 10px;
         margin-bottom: 4px;
         font-size: 1.4rem; }
-      #main-contacto .container-form form .btn-form {
+      #main-contacto .container-form form .boton--contacto {
         margin-top: 2rem;
-        background-color: #ff8500;
-        border: none;
-        border-radius: 12px;
-        color: white;
         padding: 12px 30px;
+        border: none;
+        color: white;
         text-decoration: none;
         font-size: 1rem;
         align-self: center; }
@@ -364,13 +365,11 @@ div.transbox {
     height: 80%; }
     #main-contacto .container-form form {
       margin-top: 2rem; }
-      #main-contacto .container-form form .btn-form {
+      #main-contacto .container-form form .boton--contacto {
         margin-top: 3rem;
-        background-color: #ff8500;
-        border: none;
-        border-radius: 12px;
-        color: white;
         padding: 20px 60px;
+        border: none;
+        color: white;
         text-decoration: none;
         font-size: 1rem;
         align-self: center; } }
@@ -383,6 +382,6 @@ div.transbox {
     height: 80%; }
     #main-contacto .container-form form {
       margin-top: 3rem; }
-      #main-contacto .container-form form .btn-form {
+      #main-contacto .container-form form .boton--contacto {
         margin-top: 2rem;
         padding: 30px 80px; } }

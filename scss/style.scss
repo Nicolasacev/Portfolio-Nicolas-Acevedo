@@ -59,7 +59,7 @@
         .contenedor-h1{
             align-content: center;
             h1{
-                font-size:2rem;
+                font-size:$h1-mobile;
                 margin-left: 0.5em;
                 align-self: center;
                 font-family: $font-script;
@@ -101,7 +101,7 @@
     /*titulos de cada página*/
 
     h2{
-        font-size: 2.5rem;
+        font-size: $h2;
         border: 1px solid white;
         width: 100%;
         margin-bottom: 0.2rem;
@@ -138,7 +138,7 @@
                 align-self: center;
                 padding-right: 90px;
                 white-space: nowrap;
-                font-size: 3rem;
+                font-size: $h1-tablet;
                 margin-bottom: 0;
             }
             .navbar-toggler{
@@ -166,7 +166,7 @@
 @media screen and (min-width: 1000px) {
 
         h1{
-            font-size:2.2rem;
+            font-size:$h1-desktop;
             padding:4px;
             line-height: 0.8;
             position: absolute;
@@ -243,20 +243,25 @@
             width: 100%;  
             border: 1px solid white;
         }
-   
-        #boton-inicio{
-            margin-top: 5rem;
-            background-color: #ff8500;
-            border-radius: 25px;
-            padding: 25px;
-            font-size: 1.3rem;
-            font-weight: bolder;
-            margin-bottom: 3rem;
-            &:hover{
-                transform: scale(1.2,1.2);
-            }
+    }
+
+    .boton{
+        background-color: #ff8500;
+        border-radius: 20px;
+        font-weight: bolder;
+    }
+
+    .boton--inicio{
+        @extend .boton;
+        margin-top: 5rem;
+        padding: 25px;
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+        &:hover{
+            transform: scale(1.2,1.2);
         }
     }
+
     div.transbox{
         margin-bottom: 20%;
         background-color: $primary-color;
@@ -275,7 +280,7 @@
 
 @media screen and (min-width: 768px) {
 
-    #boton-inicio{
+    .boton--inicio{
         margin-top: 2rem;
         width: 30rem;
         padding: 15px;
@@ -289,7 +294,7 @@
     div.transbox{
         margin-bottom: 11%;
     }
-    #boton-inicio{
+    .boton--inicio{
         margin-top: 7rem;
     }
 }
@@ -323,7 +328,7 @@
             align-content: center;
             padding: 10px;
             .h3-Servicios{
-                font-size: 1.4rem;
+                font-size: $h3;
                 margin-bottom: 1.5rem;
             }
         }  
@@ -456,13 +461,11 @@
                     font-size: 1.4rem;
                 }    
             
-                .btn-form{
-                    margin-top: 2rem;
-                    background-color: #ff8500; 
+                .boton--contacto{
+                    @include btns-form (2rem, 12px 30px);
+                    @extend .boton;
                     border: none;
-                    border-radius: 12px;
                     color: white;
-                    padding: 12px 30px;
                     text-decoration: none;
                     font-size: 1rem;
                     align-self: center;
@@ -482,13 +485,10 @@
             height: 80%;
             form{
                 margin-top: 2rem;
-                .btn-form{
-                    margin-top:3rem;
-                    background-color: #ff8500; 
+                .boton--contacto{
+                    @include btns-form (3rem, 20px 60px);
                     border: none;
-                    border-radius: 12px;
                     color: white;
-                    padding: 20px 60px;
                     text-decoration: none;
                     font-size: 1rem;
                     align-self: center;
@@ -509,9 +509,8 @@
             height: 80%;
             form{
                 margin-top: 3rem;
-                .btn-form{
-                    margin-top: 2rem;
-                    padding: 30px 80px;
+                .boton--contacto{
+                    @include btns-form (2rem, 30px 80px);
                 } 
             }
         }
