@@ -381,11 +381,21 @@
 
     #main-portfolio{
         display: flex;
+        .contenedor-carrusel{
+            .row>* {
+                .carousel-item img{
+                    height: 600px;
+                }
+            }
+        }
         h5{
             font-size: 4rem;
         }
     }   
 }
+
+
+
 
 /*------------------------------Comienza pagina SOBRE MI--------------------------*/
 

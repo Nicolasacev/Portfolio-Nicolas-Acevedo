@@ -291,6 +291,8 @@ div.transbox {
 @media screen and (min-width: 1000px) {
   #main-portfolio {
     display: flex; }
+    #main-portfolio .contenedor-carrusel .row > * .carousel-item img {
+      height: 600px; }
     #main-portfolio h5 {
       font-size: 4rem; } }
 
