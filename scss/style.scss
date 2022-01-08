@@ -142,7 +142,7 @@
                 margin-bottom: 0;
             }
             .navbar-toggler{
-                margin-left: 15rem; 
+                margin-left: 20rem; 
             }
             .navbar-toggler-icon{
                 display: block;
@@ -280,6 +280,10 @@
 
 @media screen and (min-width: 768px) {
 
+    #main-index{
+        height: 750px;
+    }
+
     .boton--inicio{
         margin-top: 2rem;
         width: 30rem;
@@ -364,13 +368,14 @@
 
     #main-portfolio{
         display: inline-block;  
-    }
-
-    .contenedor-carrusel{
-        margin-top: 0;
-        .carousel-item img{
-            height: 730px;
-            width: 1400px;
+        .contenedor-carrusel{
+            margin-top: 0;
+            .row>* {
+                .carousel-item img{
+                    height: 650px;
+                    width: 1400px;
+                }
+            }
         }
     }
 }
@@ -384,7 +389,7 @@
         .contenedor-carrusel{
             .row>* {
                 .carousel-item img{
-                    height: 600px;
+                    height: 680px;
                 }
             }
         }
@@ -393,9 +398,6 @@
         }
     }   
 }
-
-
-
 
 /*------------------------------Comienza pagina SOBRE MI--------------------------*/
 

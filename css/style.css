@@ -113,7 +113,7 @@ footer {
         font-size: 3rem;
         margin-bottom: 0; }
       header .container-fluid .navbar-toggler {
-        margin-left: 15rem; }
+        margin-left: 20rem; }
       header .container-fluid .navbar-toggler-icon {
         display: block; }
   main {
@@ -218,6 +218,8 @@ div.transbox {
 
 /* breakpoint 768px home */
 @media screen and (min-width: 768px) {
+  #main-index {
+    height: 750px; }
   .boton--inicio {
     margin-top: 2rem;
     width: 30rem;
@@ -281,18 +283,18 @@ div.transbox {
 @media screen and (min-width: 768px) {
   #main-portfolio {
     display: inline-block; }
-  .contenedor-carrusel {
-    margin-top: 0; }
-    .contenedor-carrusel .carousel-item img {
-      height: 730px;
-      width: 1400px; } }
+    #main-portfolio .contenedor-carrusel {
+      margin-top: 0; }
+      #main-portfolio .contenedor-carrusel .row > * .carousel-item img {
+        height: 650px;
+        width: 1400px; } }
 
 /* breakpoint 1000px portfolio */
 @media screen and (min-width: 1000px) {
   #main-portfolio {
     display: flex; }
     #main-portfolio .contenedor-carrusel .row > * .carousel-item img {
-      height: 600px; }
+      height: 680px; }
     #main-portfolio h5 {
       font-size: 4rem; } }
 
